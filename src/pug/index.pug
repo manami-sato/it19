@@ -1,0 +1,140 @@
+doctype html
+html(lang="ja")
+	head
+		include _head.pug
+		link(rel="stylesheet", href="css/index.css")
+		title 
+	body
+		main.index
+			nav.index__nav
+				ul.index__nav--link
+					li 
+						a(href="#") IT19とは
+					li 
+						a(href="#") コース紹介
+					li 
+						a(href="#") 学習スタイル
+					li 
+						a(href="#") だれだれの場合
+			section.index__fv
+				div.index__fv--logo
+					h1
+						img(src="img/index_watashirashii_1.svg",alt="ITでわたしらしい働き方を")
+					a(href="#") 今すぐ無料カウンセリング
+				div.index__fv--illust
+					img(src="img/index_illust.svg")
+			section.index__rcm
+				h2.index__rcm--ttl
+					img(src="img/index_watashirashii_2.svg",alt="わたしらしい働き方がしたい")
+				p.index__rcm--txt
+					|IT19が考える
+					span わたし
+					| らしい働き方とは
+				div
+					div.index__rcm--flow
+						div.index__rcm--flow--num 01
+						div.index__rcm--flow--img
+							img(src="img/index_flow.png")
+						div.index__rcm--flow--txt
+							h3 手に職をつけられる
+							p サンプルテキストっぽいな？サンプルテキストっぽいな？サンプルテキストっぽいな？
+					div.index__rcm--flow
+						div.index__rcm--flow--num 02
+						div.index__rcm--flow--img
+							img(src="img/index_flow.png")
+						div.index__rcm--flow--txt
+							h3 仕事が安定している
+							p サンプルテキストっぽいな？サンプルテキストっぽいな？サンプルテキストっぽいな？
+					div.index__rcm--flow
+						div.index__rcm--flow--num 03
+						div.index__rcm--flow--img
+							img(src="img/index_flow.png")
+						div.index__rcm--flow--txt
+							h3 転職しやすい
+							p サンプルテキストっぽいな？サンプルテキストっぽいな？サンプルテキストっぽいな？
+			section.index__woman
+				h2.index__woman--ttl
+					img(src="img/index_watashirashii_3.svg",alt="なぜ女性にIT業界が選ばれるのか？")
+				div
+					div.index__woman--img
+						img(src="img/index_flow.png")
+					div.index__woman--txt
+						p サンプルテキストっぽいな？サンプルテキストっぽいな？サンプルテキストっぽいな？
+			section.index__marketing
+				h2.index__marketing--ttl
+					|講師
+					span.index__marketing--ttl--accent 1
+					|人に対して生徒最大
+					span.index__marketing--ttl--accent 9
+					|人<br>
+					|少人数制の
+					span 塾
+					|を、インフラに根強いソフタスで。
+				p.index__marketing--description
+					|IT19とはLMSという学習管理システムを用いた教育関連サービスです<br>
+					|資格取得を目的とした、現役技術者から学べる技術者育成サービスです。<br>
+					|付随して、教育機関や企業への支援や就職支援も行っております。
+				section.index__marketing--flow
+					div
+						div
+							h3.index__marketing--flow--ttl 就職サポート
+							p.index__marketing--flow--description
+								|IT19では資格取得のみならず、その先の就職まで全面的にサポートいたします。<br>
+								|※企業様からの研修のご依頼の場合、こちらは対象外となります。
+						div
+							div.index__marketing--flow--point IT19が就職をサポートします
+							div.index__marketing--flow--point 手に職をつける手助けを
+					figure
+						img(src="img/index_flow_1.png")
+				section.index__marketing--flow
+					div
+						div
+							h3.index__marketing--flow--ttl 実質無料
+							p.index__marketing--flow--description
+								|IT19を通じて就職が決定すると、全額返金キャッシュバックを行います！<br>
+								|※企業様からの研修のご依頼の場合、こちらは対象外となります。
+						div
+							div.index__marketing--flow--point IT19が就職をサポートします
+							div.index__marketing--flow--point 手に職をつける手助けを
+					figure
+						img(src="img/index_flow_2.png")
+				section.index__marketing--flow
+					div
+						div
+							h3.index__marketing--flow--ttl 就職サポート
+							p.index__marketing--flow--description IT19では、実機をご用意した本格的な演習が可能です。資格取得だけでない、実用的なスキルを身につけることができます。
+						div
+							div.index__marketing--flow--point IT19が就職をサポートします
+							div.index__marketing--flow--point 手に職をつける手助けを
+					figure
+						img(src="img/index_flow_3.png")
+			div.index__course
+				h2.index__course--ttl コース紹介
+				p.index__course--description サンプルテキスト
+				div
+					section.index__course--wrap
+						h3.index__course--wrap--title
+						div
+							p.index__course--wrap--description
+							figure.index__course--wrap--img
+							div.index__course--wrap--rcm
+								span 1
+								|日
+								span 1
+								|時間<br>
+								|約
+								span.index__course--wrap--period
+								|ヶ月
+							dl
+								dt 学習内容
+								dd.index__course--wrap--contents
+			div.index__style
+				h2.index__style--ttl 学習スタイル
+				p.index__style--description サンプルテキスト
+				div
+					section.index__style--wrap
+						figure.index__style--wrap--figure
+							p.index__style--wrap--en
+							div
+						h3.index__style--wrap--title
+		include _foot.pug

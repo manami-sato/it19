@@ -1,0 +1,410 @@
+@import "ress";
+@import "var";
+@import "common";
+
+.index {
+  &__nav {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    font-weight: bold;
+    padding:0 10%;
+    font-size: 1.6rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    &--link {
+      display: flex;
+      li{
+        margin-right: 30px;
+        a{
+          color: #707070;
+        }
+      }
+    }
+  }
+  &__fv {
+    display: flex;
+    justify-content: space-around;
+    width: 90vw;
+    min-height: 90vh;
+    margin: 0 auto;
+    &--logo {
+      display: flex;
+      justify-content: space-around;
+      flex-direction: column;
+      width: 40%;
+      h1 {
+        width: 90%;
+      }
+      a {
+        display: flex;
+        width: auto;
+        height: 56px;
+        color: $white;
+        background: $mainGreen;
+        border-radius: 28px;
+        font-size: 2.2rem;
+        font-family: zen-kaku-gothic-antique, sans-serif;
+        padding: 0 24px;
+      }
+    }
+    &--illust {
+      display: flex;
+      align-items: center;
+      width: 55%;
+    }
+  }
+  &__rcm {
+    width: 80vw;
+    margin: 90px auto 0;
+    > div {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+    &--ttl {
+      width: 80%;
+      margin: 0 auto 50px;
+      img {
+        width: 100%;
+      }
+    }
+    &--txt {
+      font-weight: bold;
+      font-size: 3rem;
+      text-align: center;
+      margin-bottom: 60px;
+      span {
+        background: linear-gradient(
+          0deg,
+          $mainGreen 0,
+          $mainGreen 30%,
+          transparent 30%,
+          transparent 100%
+        );
+      }
+    }
+    &--flow {
+      &--num {
+        color: $mainGreen;
+        font-size: 6rem;
+        font-weight: bold;
+      }
+      width: 30%;
+      min-width: 288px;
+      &--img {
+        width: 80%;
+        margin: 0 auto;
+        img {
+          width: 100%;
+        }
+      }
+      &--txt {
+        background: $gray;
+        padding: 32px 24px;
+        border-radius: 24px;
+        h3 {
+          text-align: center;
+          margin-bottom: 16px;
+        }
+        p {
+          line-height: 24px;
+        }
+      }
+    }
+  }
+  &__woman {
+    width: 80vw;
+    margin: 0 auto;
+    > div {
+      display: flex;
+      justify-content: space-around;
+    }
+    &--ttl {
+      width: 80%;
+      margin: 88px auto 64px;
+      img {
+        width: 100%;
+      }
+    }
+    &--img {
+      width: 40%;
+      img {
+        width: 100%;
+      }
+    }
+    &--txt {
+      width: 50%;
+      height: auto;
+      min-height: 200px;
+      background: $gray;
+      padding: 32px 24px;
+      border-radius: 24px;
+    }
+  }
+  &__marketing {
+    margin-top: 100px;
+    &--ttl {
+      font-size: 3rem;
+      text-align: center;
+      // line-height: 9rem;
+      margin-bottom: 24px;
+      &--accent {
+        color: $mainGreen;
+        font-size: 7rem;
+      }
+      span:last-child {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 5rem;
+        padding: 0 10px;
+        position: relative;
+        &::after {
+          content: "19";
+          color: $mainGreen;
+          font-size: 7rem;
+          opacity: 0.5;
+          position: absolute;
+          z-index: -1;
+        }
+      }
+    }
+    &--description {
+      font-size: 2rem;
+      line-height: 5rem;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+  }
+  &__marketing--flow {
+    display: flex;
+    justify-content: space-around;
+    min-height: 80vh;
+    background: $gray;
+    padding: 100px 10%;
+    > div {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 40%;
+    }
+    figure {
+      max-width: 400px;
+      img {
+        width: 100%;
+      }
+    }
+    &--ttl {
+      display: inline-block;
+      font-size: 4rem;
+      line-height: 4rem;
+      background: linear-gradient(
+        0deg,
+        $mainGreen 0,
+        $mainGreen 30%,
+        transparent 30%,
+        transparent 100%
+      );
+      position: relative;
+      &::before {
+        content: "00";
+        color: $mainGreen;
+        font-size: 2.8rem;
+        position: absolute;
+        top: 0;
+        left: -50px;
+        bottom: 0;
+        margin: auto;
+      }
+    }
+    &--description {
+      font-size: 1.8rem;
+      line-height: 3.5rem;
+      margin-top: 30px;
+    }
+    &--point {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 54px;
+      background: #fff;
+      font-size: 1.8rem;
+      font-weight: bold;
+      margin-bottom: 24px;
+      border-radius: 30px;
+      box-shadow: 0 4px 10px rgba($color: #dae2e2, $alpha: 0.9);
+    }
+    &:nth-child(2n) {
+      background: $white;
+      > div {
+        > div {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+        }
+        order: 2;
+      }
+      figure {
+        order: 1;
+      }
+    }
+  }
+  &__course {
+    width: 85vw;
+    max-width: 1200px;
+    margin: 0 auto;
+    @include titleSet();
+    > div {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+    &--wrap {
+      width: 30%;
+      min-width: 300px;
+      > div {
+        background: $gray;
+        padding: 30px 20px;
+      }
+      &--title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 65px;
+        color: $white;
+        font-size: 2.5rem;
+      }
+      &--description {
+        font-size: 1.8rem;
+      }
+      dl {
+        text-align: center;
+        margin-top: 15px;
+        dt {
+          font-size: 1.8rem;
+          margin-bottom: 10px;
+        }
+      }
+      &:nth-child(3n + 1) {
+        .index__course--wrap--title {
+          background: $mainGreen;
+        }
+        .index__course--wrap--rcm {
+          span {
+            color: $mainGreen;
+          }
+          .index__course--wrap--period {
+            color: $mainGreen;
+          }
+        }
+      }
+      &:nth-child(3n + 2) {
+        .index__course--wrap--title {
+          background: $mainBlue;
+        }
+        .index__course--wrap--rcm {
+          span {
+            color: $mainBlue;
+          }
+          .index__course--wrap--period {
+            color: $mainBlue;
+          }
+        }
+      }
+      &:nth-child(3n) {
+        .index__course--wrap--title {
+          background: $mainPurple;
+        }
+        .index__course--wrap--rcm {
+          span {
+            color: $mainPurple;
+          }
+          .index__course--wrap--period {
+            color: $mainPurple;
+          }
+        }
+      }
+      &--img {
+        width: 100%;
+        height: 200px;
+        margin: 30px 0;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+      &--rcm {
+        font-size: 1.6rem;
+        text-align: center;
+        span {
+          font-size: 2.4rem;
+          font-weight: bold;
+          margin: 0 5px;
+        }
+        .index__course--wrap--period {
+          font-size: 7rem;
+          font-weight: bold;
+          margin: 0 5px;
+          line-height: 8rem;
+        }
+      }
+      &--contents {
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+      }
+    }
+  }
+  &__style {
+    width: 80vw;
+    max-width: 1200px;
+    margin: 0 auto;
+    @include titleSet();
+    > div {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+    &--wrap {
+      width: 40%;
+      &--figure {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 300px;
+        border-radius: 20px;
+        box-shadow: 0 4px 10px rgba($color: #dae2e2, $alpha: 0.9);
+        position: relative;
+        div {
+          width: 100%;
+          height: 60%;
+          margin-top: 40px;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
+      }
+      &--en {
+        color: rgba($color: $mainBlue, $alpha: 0.25);
+        font-size: 5.5rem;
+        font-weight: bold;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+      }
+      &--title{
+        color: $mainGreen;
+        font-size: 3rem;
+        margin: 20px auto 30px;
+        text-align: center;
+      }
+    }
+  }
+}

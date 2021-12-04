@@ -1,0 +1,35 @@
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: sans-serif;
+  color: $black;
+  font-size: 1.4rem;
+  font-family: zen-kaku-gothic-new, sans-serif;
+}
+a {
+  text-decoration: none;
+  color: $black;
+  &:hover,
+  &:active {
+    color: $black;
+  }
+}
+li {
+  list-style-type: none;
+}
+
+// ::selection {
+//   background: rgba($color: lighten($accentColor, 15%), $alpha: 0.3);
+//   color: darken($accentColor, 10%);
+// }
+// ::-moz-selection {
+//   //firefox
+//   background: lighten($accentColor, 20%);
+//   color: darken($accentColor, 10%);
+// }
