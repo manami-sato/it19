@@ -1,19 +1,20 @@
-$mainGreen: #3dd8cc;
-$mainBlue: #3d87d8;
-$mainPurple: #503dd8;
+$green: #3dd8cc;
+$blue: #3d87d8;
+$purple: #503dd8;
+$darkBlue: #0d3c61;
 $black: #454545;
 $gray: #f8f5f7;
 $white: #ffffff;
 
-@mixin titleSet(){
-	&--ttl {
-		font-size: 3.5rem;
-		text-align: center;
-		margin: 80px 0 20px;
-	}
-	&--description {
-		font-size: 2rem;
-		text-align: center;
-		margin-bottom: 60px;
-	}
+@mixin titleSet() {
+  &--title {
+    font-size: 3.5rem;
+    text-align: center;
+    margin: 80px 0 20px;
+  }
+  &--description {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 60px;
+  }
 }

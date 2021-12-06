@@ -3,19 +3,10 @@ html(lang="ja")
 	head
 		include _head.pug
 		link(rel="stylesheet", href="css/index.css")
-		title 
+		title IT19
 	body
+		include _nav.pug
 		main.index
-			nav.index__nav
-				ul.index__nav--link
-					li 
-						a(href="#") IT19とは
-					li 
-						a(href="#") コース紹介
-					li 
-						a(href="#") 学習スタイル
-					li 
-						a(href="#") だれだれの場合
 			section.index__fv
 				div.index__fv--logo
 					h1
@@ -23,10 +14,10 @@ html(lang="ja")
 					a(href="#") 今すぐ無料カウンセリング
 				div.index__fv--illust
 					img(src="img/index_illust.svg")
-			section.index__rcm
-				h2.index__rcm--ttl
+			section.index__rcm#rcm
+				h2.index__rcm--title
 					img(src="img/index_watashirashii_2.svg",alt="わたしらしい働き方がしたい")
-				p.index__rcm--txt
+				p.index__rcm--text
 					|IT19が考える
 					span わたし
 					| らしい働き方とは
@@ -35,37 +26,37 @@ html(lang="ja")
 						div.index__rcm--flow--num 01
 						div.index__rcm--flow--img
 							img(src="img/index_flow.png")
-						div.index__rcm--flow--txt
+						div.index__rcm--flow--text
 							h3 手に職をつけられる
 							p サンプルテキストっぽいな？サンプルテキストっぽいな？サンプルテキストっぽいな？
 					div.index__rcm--flow
 						div.index__rcm--flow--num 02
 						div.index__rcm--flow--img
 							img(src="img/index_flow.png")
-						div.index__rcm--flow--txt
+						div.index__rcm--flow--text
 							h3 仕事が安定している
 							p サンプルテキストっぽいな？サンプルテキストっぽいな？サンプルテキストっぽいな？
 					div.index__rcm--flow
 						div.index__rcm--flow--num 03
 						div.index__rcm--flow--img
 							img(src="img/index_flow.png")
-						div.index__rcm--flow--txt
+						div.index__rcm--flow--text
 							h3 転職しやすい
 							p サンプルテキストっぽいな？サンプルテキストっぽいな？サンプルテキストっぽいな？
 			section.index__woman
-				h2.index__woman--ttl
+				h2.index__woman--title
 					img(src="img/index_watashirashii_3.svg",alt="なぜ女性にIT業界が選ばれるのか？")
 				div
 					div.index__woman--img
 						img(src="img/index_flow.png")
-					div.index__woman--txt
+					div.index__woman--text
 						p サンプルテキストっぽいな？サンプルテキストっぽいな？サンプルテキストっぽいな？
-			section.index__marketing
-				h2.index__marketing--ttl
+			section.index__marketing#marketing
+				h2.index__marketing--title
 					|講師
-					span.index__marketing--ttl--accent 1
+					span.index__marketing--title--accent 1
 					|人に対して生徒最大
-					span.index__marketing--ttl--accent 9
+					span.index__marketing--title--accent 9
 					|人<br>
 					|少人数制の
 					span 塾
@@ -77,7 +68,7 @@ html(lang="ja")
 				section.index__marketing--flow
 					div
 						div
-							h3.index__marketing--flow--ttl 就職サポート
+							h3.index__marketing--flow--title 就職サポート
 							p.index__marketing--flow--description
 								|IT19では資格取得のみならず、その先の就職まで全面的にサポートいたします。<br>
 								|※企業様からの研修のご依頼の場合、こちらは対象外となります。
@@ -89,7 +80,7 @@ html(lang="ja")
 				section.index__marketing--flow
 					div
 						div
-							h3.index__marketing--flow--ttl 実質無料
+							h3.index__marketing--flow--title 実質無料
 							p.index__marketing--flow--description
 								|IT19を通じて就職が決定すると、全額返金キャッシュバックを行います！<br>
 								|※企業様からの研修のご依頼の場合、こちらは対象外となります。
@@ -101,15 +92,15 @@ html(lang="ja")
 				section.index__marketing--flow
 					div
 						div
-							h3.index__marketing--flow--ttl 就職サポート
+							h3.index__marketing--flow--title 就職サポート
 							p.index__marketing--flow--description IT19では、実機をご用意した本格的な演習が可能です。資格取得だけでない、実用的なスキルを身につけることができます。
 						div
 							div.index__marketing--flow--point IT19が就職をサポートします
 							div.index__marketing--flow--point 手に職をつける手助けを
 					figure
 						img(src="img/index_flow_3.png")
-			div.index__course
-				h2.index__course--ttl コース紹介
+			section.index__course#course
+				h2.index__course--title コース紹介
 				p.index__course--description サンプルテキスト
 				div
 					section.index__course--wrap
@@ -128,8 +119,8 @@ html(lang="ja")
 							dl
 								dt 学習内容
 								dd.index__course--wrap--contents
-			div.index__style
-				h2.index__style--ttl 学習スタイル
+			section.index__style#style
+				h2.index__style--title 学習スタイル
 				p.index__style--description サンプルテキスト
 				div
 					section.index__style--wrap
@@ -137,4 +128,21 @@ html(lang="ja")
 							p.index__style--wrap--en
 							div
 						h3.index__style--wrap--title
+			section.index__user#user
+				h2.index__user--title 利用の流れの一例
+				p.index__user--description サンプルテキスト
+				section.index__user--wrap
+					div.index__user--wrap--course ITパスポート
+					div
+						div.index__user--wrap--icon
+							img(src="img/index_user_1.png", alt="")
+						div
+							h3.index__user--wrap--headline 利用者の声っぽい
+							div.index__user--wrap--text ITパスポートとはを載せたいサンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。
+				a(href="#").index__user--btn もっと見る
+			section.index__faq
+				h2 よくある質問
+				div.index__faq--wrap
+					div.index__faq--wrap--q
+					div.index__faq--wrap--a
 		include _foot.pug

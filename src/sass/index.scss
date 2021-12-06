@@ -3,26 +3,6 @@
 @import "common";
 
 .index {
-  &__nav {
-    display: flex;
-    align-items: center;
-    height: 80px;
-    font-weight: bold;
-    padding:0 10%;
-    font-size: 1.6rem;
-    position: fixed;
-    top: 0;
-    left: 0;
-    &--link {
-      display: flex;
-      li{
-        margin-right: 30px;
-        a{
-          color: #707070;
-        }
-      }
-    }
-  }
   &__fv {
     display: flex;
     justify-content: space-around;
@@ -42,7 +22,7 @@
         width: auto;
         height: 56px;
         color: $white;
-        background: $mainGreen;
+        background: $green;
         border-radius: 28px;
         font-size: 2.2rem;
         font-family: zen-kaku-gothic-antique, sans-serif;
@@ -63,14 +43,14 @@
       justify-content: space-around;
       flex-wrap: wrap;
     }
-    &--ttl {
+    &--title {
       width: 80%;
       margin: 0 auto 50px;
       img {
         width: 100%;
       }
     }
-    &--txt {
+    &--text {
       font-weight: bold;
       font-size: 3rem;
       text-align: center;
@@ -78,8 +58,8 @@
       span {
         background: linear-gradient(
           0deg,
-          $mainGreen 0,
-          $mainGreen 30%,
+          $green 0,
+          $green 30%,
           transparent 30%,
           transparent 100%
         );
@@ -87,7 +67,7 @@
     }
     &--flow {
       &--num {
-        color: $mainGreen;
+        color: $green;
         font-size: 6rem;
         font-weight: bold;
       }
@@ -100,7 +80,7 @@
           width: 100%;
         }
       }
-      &--txt {
+      &--text {
         background: $gray;
         padding: 32px 24px;
         border-radius: 24px;
@@ -121,7 +101,7 @@
       display: flex;
       justify-content: space-around;
     }
-    &--ttl {
+    &--title {
       width: 80%;
       margin: 88px auto 64px;
       img {
@@ -134,7 +114,7 @@
         width: 100%;
       }
     }
-    &--txt {
+    &--text {
       width: 50%;
       height: auto;
       min-height: 200px;
@@ -145,13 +125,13 @@
   }
   &__marketing {
     margin-top: 100px;
-    &--ttl {
+    &--title {
       font-size: 3rem;
       text-align: center;
       // line-height: 9rem;
       margin-bottom: 24px;
       &--accent {
-        color: $mainGreen;
+        color: $green;
         font-size: 7rem;
       }
       span:last-child {
@@ -163,7 +143,7 @@
         position: relative;
         &::after {
           content: "19";
-          color: $mainGreen;
+          color: $green;
           font-size: 7rem;
           opacity: 0.5;
           position: absolute;
@@ -196,21 +176,21 @@
         width: 100%;
       }
     }
-    &--ttl {
+    &--title {
       display: inline-block;
       font-size: 4rem;
       line-height: 4rem;
       background: linear-gradient(
         0deg,
-        $mainGreen 0,
-        $mainGreen 30%,
+        $green 0,
+        $green 30%,
         transparent 30%,
         transparent 100%
       );
       position: relative;
       &::before {
         content: "00";
-        color: $mainGreen;
+        color: $green;
         font-size: 2.8rem;
         position: absolute;
         top: 0;
@@ -235,7 +215,7 @@
       font-weight: bold;
       margin-bottom: 24px;
       border-radius: 30px;
-      box-shadow: 0 4px 10px rgba($color: #dae2e2, $alpha: 0.9);
+      box-shadow: 3px 4px 0 rgba($color: #30a79e, $alpha: 0.9);
     }
     &:nth-child(2n) {
       background: $white;
@@ -291,40 +271,40 @@
       }
       &:nth-child(3n + 1) {
         .index__course--wrap--title {
-          background: $mainGreen;
+          background: $green;
         }
         .index__course--wrap--rcm {
           span {
-            color: $mainGreen;
+            color: $green;
           }
           .index__course--wrap--period {
-            color: $mainGreen;
+            color: $green;
           }
         }
       }
       &:nth-child(3n + 2) {
         .index__course--wrap--title {
-          background: $mainBlue;
+          background: $blue;
         }
         .index__course--wrap--rcm {
           span {
-            color: $mainBlue;
+            color: $blue;
           }
           .index__course--wrap--period {
-            color: $mainBlue;
+            color: $blue;
           }
         }
       }
       &:nth-child(3n) {
         .index__course--wrap--title {
-          background: $mainPurple;
+          background: $purple;
         }
         .index__course--wrap--rcm {
           span {
-            color: $mainPurple;
+            color: $purple;
           }
           .index__course--wrap--period {
-            color: $mainPurple;
+            color: $purple;
           }
         }
       }
@@ -392,19 +372,91 @@
         }
       }
       &--en {
-        color: rgba($color: $mainBlue, $alpha: 0.25);
+        color: rgba($color: $blue, $alpha: 0.25);
         font-size: 5.5rem;
         font-weight: bold;
         position: absolute;
         top: 10px;
         left: 10px;
       }
-      &--title{
-        color: $mainGreen;
+      &--title {
+        color: $green;
         font-size: 3rem;
         margin: 20px auto 30px;
         text-align: center;
       }
     }
+  }
+  &__user {
+    @include titleSet();
+    &--wrap {
+      width: 80vw;
+      max-width: 1200px;
+      margin: 0 auto 24px;
+      padding: 48px;
+      border-radius: 8px;
+      box-shadow: 2px 5px 12px rgba($color: #dae2e2, $alpha: 0.85);
+      &:nth-child(2n + 1) {
+        .index__user--wrap--course {
+          background: $green;
+        }
+      }
+      &:nth-child(2n) {
+        .index__user--wrap--course {
+          background: $blue;
+        }
+      }
+      &--course {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        color: $white;
+        font-weight: bold;
+        font-size: 2rem;
+        margin-bottom: 24px;
+        padding: 0 24px;
+        border-radius: 20px;
+        & + div {
+          display: flex;
+          width: 100%;
+        }
+      }
+      &--icon {
+        width: 125px;
+        height: 125px;
+        margin-right: 24px;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+        & + div {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: flex-start;
+          width: 80%;
+        }
+      }
+      &--headline {
+        font-size: 2.2rem;
+      }
+      &--text {
+        font-size: 1.6rem;
+      }
+    }
+    &--btn {
+      display: inline-block;
+      min-width: 160px;
+      color: $green;
+      font-size: 2.2rem;
+      padding: 8px 24px;
+      border: $green 1px solid;
+      border-radius: 40px;
+      margin: 0 auto;
+    }
+  }
+  &__faq{
+    
   }
 }

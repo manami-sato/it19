@@ -1,0 +1,31 @@
+doctype html
+html(lang="ja")
+	head
+		include _head.pug
+		link(rel="stylesheet", href="css/counseling.css")
+		title 無料カウンセリングを予約する｜IT19
+	body
+		include _nav.pug
+		main.counseling
+			section.counseling__fv
+				h2.counseling__fv--title 無料カウンセリングを予約する
+				p.counseling__fv--description
+					|無料カウンセリングはオンラインで実施するため、お越しいただく必要はございません。<br>
+					|所要時間は1時間くらいやとおもいまーす<br>
+					|励みになりまーす
+			section.counseling__form
+				h2.counseling__form--title 無料カウンセリング予約フォーム
+				div.counseling__form--flow
+					div.counseling__form--flow--selected
+						div STEP
+						div 1
+						div 日時を選択
+					div
+						div STEP
+						div 2
+						div 情報入力
+					div
+						div STEP
+						div 3
+						div 送信
+		include _foot.pug
