@@ -13,7 +13,7 @@ body {
   // font-family: sans-serif;
   color: $black;
   font-size: 1.4rem;
-  font-family: rustica,zen-kaku-gothic-new, sans-serif;
+  font-family: rustica, zen-kaku-gothic-new, sans-serif;
   // font-weight: 400;
 }
 a {
@@ -95,3 +95,76 @@ li {
 /* ------------------------------
 グローバルナビここまで
 ------------------------------ */
+/* ------------------------------
+footerここから
+------------------------------ */
+.foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 104px;
+  background: $darkGreen;
+  padding: 0 10%;
+  &__nav {
+    display: flex;
+    &--link {
+      font-size: 1.6rem;
+      margin-right: 40px;
+      a {
+        color: $white;
+        opacity: 1;
+        transition: 0.2s opacity;
+        &:hover {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+  &__wrap {
+    display: flex;
+    align-items: center;
+    &--sns {
+      display: block;
+      width: 32px;
+      height: 32px;
+      margin-right: 16px;
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+      path {
+        fill: $white;
+      }
+    }
+    &--copy {
+      color: rgba($color: $white, $alpha: 0.8);
+    }
+  }
+}
+/* ------------------------------
+footerここまで
+------------------------------ */
+
+@keyframes fadeIn {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    display: block;
+    opacity: 1;
+  }
+
+  100% {
+    display: none;
+    opacity: 0;
+  }
+}

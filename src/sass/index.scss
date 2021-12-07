@@ -446,17 +446,268 @@
       }
     }
     &--btn {
-      display: inline-block;
-      min-width: 160px;
+      display: block;
+      width: 200px;
       color: $green;
       font-size: 2.2rem;
-      padding: 8px 24px;
+      padding: 8px 0;
       border: $green 1px solid;
       border-radius: 40px;
-      margin: 0 auto;
+      margin: 40px auto 88px;
+      text-align: center;
     }
   }
-  &__faq{
-    
+  &__faq {
+    width: 75vw;
+    max-width: 1000px;
+    margin: 0 auto;
+    &--title {
+      font-size: 3.5rem;
+      text-align: center;
+      margin: 0 auto 60px;
+    }
+    &--wrap {
+      margin-bottom: 32px;
+      padding: 24px 56px;
+      border-radius: 40px;
+      box-shadow: 0 0 26px rgba($color: #dae2e2, $alpha: 0.9);
+      > div:first-of-type {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      &--q {
+        display: flex;
+        align-items: center;
+        font-size: 2.4rem;
+        font-weight: bold;
+        &::before {
+          content: "Q";
+          @include faqSet;
+        }
+      }
+      &--a {
+        display: flex;
+        align-items: center;
+        font-size: 1.6rem;
+        margin-top: 24px;
+        &::before {
+          content: "A";
+          @include faqSet($fs: 2.5rem, $o: 0.5);
+        }
+      }
+      &--mark {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        &::before,
+        &::after {
+          content: "";
+          width: 24px;
+          height: 6px;
+          background: $green;
+          position: absolute;
+        }
+        &::after {
+          transform: rotateZ(90deg);
+        }
+      }
+    }
+  }
+  &__counseling {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 400px;
+    background: $green;
+    margin-top: 120px;
+    &--txt {
+      color: $white;
+      font-size: 3.2rem;
+      font-weight: bold;
+    }
+    &--link {
+      display: flex;
+      align-items: center;
+      height: 64px;
+      color: $green;
+      background: $white;
+      font-size: 2.4rem;
+      font-weight: bold;
+      margin-top: 32px;
+      padding: 0 48px;
+      border-radius: 32px;
+      transform: translateY(0);
+      box-shadow: 0 8px 8px darken($color: $green, $amount: 10%);
+      transition: 0.2s transform, 0.2s box-shadow;
+      &:hover {
+        color: $green;
+        transform: translateY(4px);
+        box-shadow: 0 0 0 transparent;
+      }
+    }
+  }
+  &__modal {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background: rgba($color: $darkGreen, $alpha: 0.9);
+    position: absolute;
+    // position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: 0.2s opacity;
+    z-index: 20;
+    > div {
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-start;
+      flex-direction: column;
+      width: 70vw;
+      max-width: 1200px;
+      height: 80vh;
+      background: $white;
+      border-radius: 20px;
+      margin: auto;
+      padding:5%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+    &--head {
+      display: inline-block;
+      position: relative;
+      &--title {
+        display: inline-block;
+        color: $green;
+        font-size: 4rem;
+        font-weight: bold;
+      }
+      &--en {
+        color: rgba($color: $blue, $alpha: 0.25);
+        font-size: 3rem;
+        font-weight: bold;
+        position: absolute;
+        bottom: -16px;
+        right: -32px;
+      }
+    }
+    &--wrap {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      justify-content: space-around;
+      &--img {
+        width: 35%;
+        height: inherit;
+        img {
+          width: 100%;
+          height: inherit;
+          object-fit: contain;
+        }
+        & + div {
+          width: 55%;
+          overflow: scroll;
+        }
+      }
+      &--headline {
+        font-size: 2.5rem;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 40px;
+      }
+      &--text {
+        font-weight: bold;
+        line-height: 4rem;
+      }
+    }
+    &--back {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 32px;
+      height: 32px;
+      border-radius: 16px;
+      border: rgba($color: $darkGreen, $alpha: 0.8) 3px solid;
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      opacity: 1;
+      transition: 0.2s opacity;
+      &:hover {
+        opacity: 0.5;
+        cursor: pointer;
+      }
+      &::before,
+      &::after {
+        content: "";
+        display: block;
+        width: 20px;
+        height: 3px;
+        background: rgba($color: $darkGreen, $alpha: 0.8);
+        position: absolute;
+      }
+      &::before {
+        transform: rotateZ(45deg);
+      }
+      &::after {
+        transform: rotateZ(-45deg);
+      }
+    }
+    &--arrow {
+      display: flex;
+      justify-content: space-between;
+      width: calc(100% - 24px * 2);
+      height: 32px;
+      position: absolute;
+      right: 0;
+      bottom: 24px;
+      left: 0;
+      margin: auto;
+      &--prev,
+      &--next {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 32px;
+        opacity: 1;
+        transition: 0.2s opacity;
+        &:hover {
+          opacity: 0.5;
+          cursor: pointer;
+        }
+      }
+      &--prev {
+        &::before {
+          @include modalAllowSet($t: 11px);
+        }
+      }
+      &--prev {
+        &::after {
+          @include modalAllowSet($t: -7px, $rotate: rotateZ(-45deg));
+        }
+      }
+      &--next {
+        &::before {
+          @include modalAllowSet($rotate: rotateZ(-45deg));
+        }
+      }
+      &--next {
+        &::after {
+          @include modalAllowSet($t: -7px);
+        }
+      }
+    }
+  }
+  #modalDisplay {
+    display: block;
+    opacity: 1;
+    animation: 0.2s fadeIn;
   }
 }

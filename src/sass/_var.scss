@@ -1,6 +1,7 @@
 $green: #3dd8cc;
 $blue: #3d87d8;
 $purple: #503dd8;
+$darkGreen: #1f3736;
 $darkBlue: #0d3c61;
 $black: #454545;
 $gray: #f8f5f7;
@@ -17,4 +18,28 @@ $white: #ffffff;
     text-align: center;
     margin-bottom: 60px;
   }
+}
+
+@mixin faqSet($fs: 4rem, $o: 1) {
+  display: block;
+  width: 56px;
+  color: $green;
+  font-size: $fs;
+  font-weight: bold;
+  line-height: $fs;
+  opacity: $o;
+  margin-right: 24px;
+  text-align: center;
+}
+
+@mixin modalAllowSet($t:11px,$rotate:rotateZ(45deg)){
+  content: "";
+  display: block;
+  width: 16px;
+  height: 4px;
+  background: $green;
+  border-radius: 2px;
+  margin-top: $t;
+  position: absolute;
+  transform: $rotate;
 }

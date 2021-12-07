@@ -388,7 +388,7 @@ html {
 body {
   color: #454545;
   font-size: 1.4rem;
-  font-family: rustica,zen-kaku-gothic-new, sans-serif;
+  font-family: rustica, zen-kaku-gothic-new, sans-serif;
 }
 
 a {
@@ -469,6 +469,108 @@ li {
 /* ------------------------------
 グローバルナビここまで
 ------------------------------ */
+/* ------------------------------
+footerここから
+------------------------------ */
+.foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 104px;
+  background: #1f3736;
+  padding: 0 10%;
+}
+
+.foot__nav {
+  display: flex;
+}
+
+.foot__nav--link {
+  font-size: 1.6rem;
+  margin-right: 40px;
+}
+
+.foot__nav--link a {
+  color: #ffffff;
+  opacity: 1;
+  transition: 0.2s opacity;
+}
+
+.foot__nav--link a:hover {
+  opacity: 0.5;
+}
+
+.foot__wrap {
+  display: flex;
+  align-items: center;
+}
+
+.foot__wrap--sns {
+  display: block;
+  width: 32px;
+  height: 32px;
+  margin-right: 16px;
+}
+
+.foot__wrap--sns svg {
+  width: 100%;
+  height: 100%;
+}
+
+.foot__wrap--sns path {
+  fill: #ffffff;
+}
+
+.foot__wrap--copy {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* ------------------------------
+footerここまで
+------------------------------ */
+@-webkit-keyframes fadeIn {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    display: block;
+    opacity: 1;
+  }
+  100% {
+    display: none;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    display: block;
+    opacity: 1;
+  }
+  100% {
+    display: none;
+    opacity: 0;
+  }
+}
+
 .counseling__fv {
   display: flex;
   flex-direction: column;

@@ -132,17 +132,35 @@ html(lang="ja")
 				h2.index__user--title 利用の流れの一例
 				p.index__user--description サンプルテキスト
 				section.index__user--wrap
-					div.index__user--wrap--course ITパスポート
+					div.index__user--wrap--course
 					div
 						div.index__user--wrap--icon
-							img(src="img/index_user_1.png", alt="")
 						div
-							h3.index__user--wrap--headline 利用者の声っぽい
-							div.index__user--wrap--text ITパスポートとはを載せたいサンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。
+							h3.index__user--wrap--headline
+							div.index__user--wrap--text
 				a(href="#").index__user--btn もっと見る
 			section.index__faq
-				h2 よくある質問
+				h2.index__faq--title よくある質問
 				div.index__faq--wrap
-					div.index__faq--wrap--q
+					div
+						div.index__faq--wrap--q
+						div.index__faq--wrap--mark
 					div.index__faq--wrap--a
+			section.index__counseling
+				p.index__counseling--txt IT業界への一歩を進めよう（仮）
+				a(href="#").index__counseling--link 今すぐ無料カウンセリング 
+			div.index__modal
+				div
+					div.index__modal--head
+						div.index__modal--head--title
+						div.index__modal--head--en
+					div.index__modal--wrap
+						div.index__modal--wrap--img
+						div
+							div.index__modal--wrap--headline
+							div.index__modal--wrap--text
+					div.index__modal--back
+					div.index__modal--arrow
+						div.index__modal--arrow--prev
+						div.index__modal--arrow--next
 		include _foot.pug
