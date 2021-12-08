@@ -31,15 +31,15 @@ li {
 全体設定ここまで
 ------------------------------ */
 
-// ::selection {
-//   background: rgba($color: lighten($accentColor, 15%), $alpha: 0.3);
-//   color: darken($accentColor, 10%);
-// }
-// ::-moz-selection {
-//   //firefox
-//   background: lighten($accentColor, 20%);
-//   color: darken($accentColor, 10%);
-// }
+::selection {
+  background: $pailGreen;
+  color: $darkBlue;
+}
+::-moz-selection {
+  //firefox
+  background: $pailGreen;
+  color: $darkBlue;
+}
 
 /* ------------------------------
 グローバルナビここから
@@ -54,6 +54,7 @@ li {
   font-weight: bold;
   font-size: 1.6rem;
   padding: 0 10%;
+  box-shadow: 0 6px 20px rgba($color: $pailGreen, $alpha: 0.85);
   position: fixed;
   top: 0;
   left: 0;

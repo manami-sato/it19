@@ -3,6 +3,7 @@ $blue: #3d87d8;
 $purple: #503dd8;
 $darkGreen: #1f3736;
 $darkBlue: #0d3c61;
+$pailGreen: #dae2e2;
 $black: #454545;
 $gray: #f8f5f7;
 $white: #ffffff;
@@ -32,7 +33,7 @@ $white: #ffffff;
   text-align: center;
 }
 
-@mixin modalAllowSet($t:11px,$rotate:rotateZ(45deg)){
+@mixin modalAllowSet($t: 11px, $rotate: rotateZ(45deg)) {
   content: "";
   display: block;
   width: 16px;

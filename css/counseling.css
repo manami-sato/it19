@@ -407,6 +407,20 @@ li {
 /* ------------------------------
 全体設定ここまで
 ------------------------------ */
+::-moz-selection {
+  background: #dae2e2;
+  color: #0d3c61;
+}
+::selection {
+  background: #dae2e2;
+  color: #0d3c61;
+}
+
+::-moz-selection {
+  background: #dae2e2;
+  color: #0d3c61;
+}
+
 /* ------------------------------
 グローバルナビここから
 ------------------------------ */
@@ -420,6 +434,7 @@ li {
   font-weight: bold;
   font-size: 1.6rem;
   padding: 0 10%;
+  box-shadow: 0 6px 20px rgba(218, 226, 226, 0.85);
   position: fixed;
   top: 0;
   left: 0;
