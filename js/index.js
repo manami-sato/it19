@@ -38,7 +38,7 @@
   let userWrap = $(".index__user--wrap");
   let faqWrap = $(".index__faq--wrap");
   $.ajax({
-    url: "https://click.ecc.ac.jp/ecc/msatou/it19/js/products.php",
+    url: "https://click.ecc.ac.jp/ecc/msatou/products/it19.php",
     method: "GET",
     dataType: "json",
     timeout: 3000,

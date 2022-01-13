@@ -5,7 +5,23 @@
       <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="keywords" content="">
+        <meta name="description" content="#">
+        <meta name="twitter:card" content="summary">
+        <meta property="og:site_name" content="IT19">
+        <meta property="og:title" content="IT19">
+        <meta property="og:description" content="IT19の説明が入りそうなサンプルテキスト">
+        <meta property="og:url" content="http://">
+        <meta property="og:image" content="img/favicon.png">
+        <meta property="og:image:type" content="image/jpeg">
+        <meta property="og:image:width" content="600">
+        <meta property="og:image:height" content="400">
+        <meta property="og:type" content="website">
+        <link rel="shortcut icon" href="img/favicon.ico" type="image/vnd.microsoft.icon">
+        <link rel="apple-touch-icon" href="img/app_touch_icon.png">
+        <link rel="icon" type="image/x-icon" href="img/favicon.ico">
         <script src="js/jquery.js"></script>
       </head>
     </html>
@@ -15,11 +31,12 @@
   <body>
     <nav class="nav">
       <ul class="nav__link">
-        <li> <a href="#"><img src="img/logo.svg" alt="IT19"></a></li>
+        <li> <a class="nav__link--icon" href="#"><img src="img/logo.svg" alt="IT19"></a></li>
         <li> <a href="#rcm">IT19とは</a></li>
         <li> <a href="#course">コース紹介</a></li>
         <li> <a href="#style">学習スタイル</a></li>
-        <li> <a href="#user">だれだれの場合</a></li>
+        <li> <a href="#user">利用の一例</a></li>
+        <li> <a href="#faq">よくある質問</a></li>
       </ul><a class="nav__counseling" href="counseling.html">今すぐ無料カウンセリング </a>
     </nav>
     <main class="index">
@@ -27,7 +44,6 @@
         <div class="index__fv--logo">
           <h1><img src="img/index_watashirashii_1.svg" alt="ITでわたしらしい働き方を"></h1><a href="#">今すぐ無料カウンセリング</a>
         </div>
-        <div class="index__fv--illust"><img src="img/index_illust.svg"></div>
       </section>
       <section class="index__rcm" id="rcm">
         <h2 class="index__rcm--title"><img src="img/index_watashirashii_2.svg" alt="わたしらしい働き方がしたい"></h2>
@@ -78,7 +94,7 @@
           付随して、教育機関や企業への支援や就職支援も行っております。
         </p>
         <section class="index__marketing--flow">
-          <div>
+          <div class="index__marketing--flow--txt">
             <div>
               <h3 class="index__marketing--flow--title">就職サポート</h3>
               <p class="index__marketing--flow--description">
@@ -91,10 +107,10 @@
               <div class="index__marketing--flow--point">手に職をつける手助けを</div>
             </div>
           </div>
-          <figure><img src="img/index_flow_1.png"></figure>
+          <figure class="index__marketing--flow--img"><img src="img/index_flow_1.png"></figure>
         </section>
         <section class="index__marketing--flow">
-          <div>
+          <div class="index__marketing--flow--txt">
             <div>
               <h3 class="index__marketing--flow--title">実質無料</h3>
               <p class="index__marketing--flow--description">
@@ -107,12 +123,12 @@
               <div class="index__marketing--flow--point">手に職をつける手助けを</div>
             </div>
           </div>
-          <figure><img src="img/index_flow_2.png"></figure>
+          <figure class="index__marketing--flow--img"><img src="img/index_flow_2.png"></figure>
         </section>
         <section class="index__marketing--flow">
-          <div>
+          <div class="index__marketing--flow--txt">
             <div>
-              <h3 class="index__marketing--flow--title">就職サポート</h3>
+              <h3 class="index__marketing--flow--title">実機での学習</h3>
               <p class="index__marketing--flow--description">IT19では、実機をご用意した本格的な演習が可能です。資格取得だけでない、実用的なスキルを身につけることができます。</p>
             </div>
             <div>
@@ -120,7 +136,7 @@
               <div class="index__marketing--flow--point">手に職をつける手助けを</div>
             </div>
           </div>
-          <figure><img src="img/index_flow_3.png"></figure>
+          <figure class="index__marketing--flow--img"><img src="img/index_flow_3.png"></figure>
         </section>
       </section>
       <section class="index__course" id="course">
@@ -170,7 +186,7 @@
           </div>
         </section><a class="index__user--btn" href="#">もっと見る</a>
       </section>
-      <section class="index__faq">
+      <section class="index__faq" id="faq">
         <h2 class="index__faq--title">よくある質問</h2>
         <div class="index__faq--wrap">
           <div>

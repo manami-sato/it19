@@ -408,82 +408,19 @@ li {
 全体設定ここまで
 ------------------------------ */
 ::-moz-selection {
-  background: #dae2e2;
+  background: rgba(218, 226, 226, 0.3);
   color: #0d3c61;
 }
 ::selection {
-  background: #dae2e2;
+  background: rgba(218, 226, 226, 0.3);
   color: #0d3c61;
 }
 
 ::-moz-selection {
-  background: #dae2e2;
+  background: rgba(218, 226, 226, 0.3);
   color: #0d3c61;
 }
 
-/* ------------------------------
-グローバルナビここから
------------------------------- */
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100vw;
-  height: 80px;
-  background: rgba(255, 255, 255, 0.9);
-  font-weight: bold;
-  font-size: 1.6rem;
-  padding: 0 10%;
-  box-shadow: 0 6px 20px rgba(218, 226, 226, 0.85);
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 10;
-}
-
-.nav__link {
-  display: flex;
-}
-
-.nav__link li {
-  margin-right: 30px;
-}
-
-.nav__link li a {
-  display: flex;
-  align-items: center;
-  color: #707070;
-  height: 100%;
-}
-
-.nav__link li a img {
-  width: 80px;
-  height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-
-.nav__counseling {
-  display: flex;
-  align-items: center;
-  height: 60px;
-  color: #fff;
-  background: #3dd8cc;
-  font-size: 1.8rem;
-  padding: 0 40px;
-  border-radius: 30px;
-  opacity: 1;
-  transition: 0.2s opacity;
-}
-
-.nav__counseling:hover {
-  color: #fff;
-  opacity: 0.5;
-}
-
-/* ------------------------------
-グローバルナビここまで
------------------------------- */
 /* ------------------------------
 footerここから
 ------------------------------ */
@@ -586,21 +523,184 @@ footerここまで
   }
 }
 
+@media screen and (min-width: 481px) {
+  /* ------------------------------
+  グローバルナビここから
+  ------------------------------ */
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.9);
+    font-weight: bold;
+    font-size: 1.6rem;
+    padding: 0 10%;
+    box-shadow: 0 6px 20px rgba(218, 226, 226, 0.85);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
+  .nav__link {
+    display: flex;
+  }
+  .nav__link li {
+    margin-right: 32px;
+  }
+  .nav__link li a {
+    display: flex;
+    align-items: center;
+    color: #707070;
+    height: 100%;
+  }
+  .nav__link li a img {
+    width: 80px;
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .nav__counseling {
+    display: flex;
+    align-items: center;
+    height: 64px;
+    color: #fff;
+    background: #3dd8cc;
+    font-size: 1.8rem;
+    padding: 0 40px;
+    border-radius: 32px;
+    opacity: 1;
+    transition: 0.2s opacity;
+  }
+  .nav__counseling:hover {
+    color: #fff;
+    opacity: 0.5;
+  }
+  /* ------------------------------
+  グローバルナビここまで
+  ------------------------------ */
+}
+
+@media screen and (max-width: 480px) {
+  /* ------------------------------
+  グローバルナビここから
+  ------------------------------ */
+  .nav {
+    display: none;
+    justify-content: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    background: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  .nav__link {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .nav__link li {
+    display: flex;
+    align-items: center;
+  }
+  .nav__link li:not(:first-of-type) {
+    border-radius: 8px;
+    box-shadow: 2px 5px 8px rgba(201, 219, 219, 0.85);
+  }
+  .nav__link li:not(:first-of-type) a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin: auto;
+    position: relative;
+  }
+  .nav__link li:not(:first-of-type) a::before {
+    content: "";
+    display: block;
+    width: 32px;
+    height: 32px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 16px;
+  }
+  .nav__link li:not(:first-of-type) a::after {
+    content: "";
+    display: block;
+    width: 48px;
+    height: 2px;
+    background: #3dd8cc;
+    margin-top: 40px;
+    position: absolute;
+    top: 0;
+  }
+  .nav__link li:nth-of-type(2) {
+    width: 60%;
+    height: 128px;
+    margin: 24px 0;
+  }
+  .nav__link li:nth-of-type(2) a {
+    width: 70%;
+  }
+  .nav__link li:nth-of-type(2) a::before {
+    background-image: url("../img/nav_icon_1.png");
+  }
+  .nav__link li:not(:nth-of-type(2)) {
+    width: 44%;
+    height: 104px;
+  }
+  .nav__link li:not(:nth-of-type(2)) a {
+    width: 100%;
+  }
+  .nav__link li:nth-of-type(3) {
+    margin-bottom: 16px;
+  }
+  .nav__link li:nth-of-type(3) a::before {
+    background-image: url("../img/nav_icon_2.png");
+  }
+  .nav__link li:nth-of-type(4) {
+    margin-bottom: 16px;
+  }
+  .nav__link li:nth-of-type(4) a::before {
+    background-image: url("../img/nav_icon_3.png");
+  }
+  .nav__link li:nth-of-type(5) a::before {
+    background-image: url("../img/nav_icon_4.png");
+  }
+  .nav__link li:nth-of-type(6) a::before {
+    background-image: url("../img/nav_icon_5.png");
+  }
+  .nav__link li--icon {
+    width: 100%;
+  }
+  .nav__counseling {
+    display: none;
+  }
+  /* ------------------------------
+  グローバルナビここまで
+  ------------------------------ */
+}
+
 .index__fv {
   display: flex;
-  justify-content: space-around;
   width: 90vw;
-  max-width: 1200px;
-  height: 90vh;
-  max-height: 700px;
-  margin: 80px auto 0;
+  background: url("../img/index_illust.png") no-repeat;
+  background-position: bottom 20vh right 5vw;
+  margin: 0 auto;
 }
 
 .index__fv--logo {
   display: flex;
   justify-content: space-around;
   flex-direction: column;
-  width: 40%;
 }
 
 .index__fv--logo h1 {
@@ -611,34 +711,15 @@ footerここまで
   display: flex;
   justify-content: center;
   align-items: center;
-  width: auto;
-  height: 56px;
   color: #ffffff;
   background: #3dd8cc;
-  font-size: 2.2rem;
   font-weight: bold;
   border-radius: 28px;
   padding: 0 24px;
 }
 
-.index__fv--illust {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 55%;
-}
-
-.index__fv--illust img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-
 .index__rcm {
-  width: 80vw;
-  max-width: 1200px;
-  margin: 90px auto 0;
+  margin: 88px auto 0;
 }
 
 .index__rcm > div {
@@ -647,18 +728,12 @@ footerここまで
   flex-wrap: wrap;
 }
 
-.index__rcm--title {
-  width: 80%;
-  margin: 0 auto 50px;
-}
-
 .index__rcm--title img {
   width: 100%;
 }
 
 .index__rcm--text {
   font-weight: bold;
-  font-size: 3rem;
   text-align: center;
   margin-bottom: 60px;
 }
@@ -783,31 +858,32 @@ footerここまで
   font-size: 2rem;
   line-height: 5rem;
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 72px;
 }
 
 .index__marketing--flow {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
   height: 80vh;
-  max-height: 600px;
   background: #f8f5f7;
   padding: 100px 10%;
 }
 
-.index__marketing--flow > div {
+.index__marketing--flow--txt {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 40%;
   max-width: 480px;
+  min-width: 320px;
 }
 
-.index__marketing--flow figure {
-  max-width: 400px;
+.index__marketing--flow--img {
+  width: 400px;
 }
 
-.index__marketing--flow figure img {
+.index__marketing--flow--img img {
   width: 100%;
 }
 
@@ -877,13 +953,13 @@ footerここまで
 .index__course--title {
   font-size: 3.5rem;
   text-align: center;
-  margin: 80px 0 20px;
+  margin: 80px 0 24px;
 }
 
 .index__course--description {
   font-size: 2rem;
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 64px;
 }
 
 .index__course > div {
@@ -1001,19 +1077,19 @@ footerここまで
 .index__style {
   width: 80vw;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 0 auto 64px;
 }
 
 .index__style--title {
   font-size: 3.5rem;
   text-align: center;
-  margin: 80px 0 20px;
+  margin: 80px 0 24px;
 }
 
 .index__style--description {
   font-size: 2rem;
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 64px;
 }
 
 .index__style > div {
@@ -1072,25 +1148,30 @@ footerここまで
   text-align: center;
 }
 
+.index__user {
+  background: #e7faf9;
+  padding: 80px 0;
+}
+
 .index__user--title {
   font-size: 3.5rem;
   text-align: center;
-  margin: 80px 0 20px;
+  margin: 0 0 20px;
 }
 
 .index__user--description {
   font-size: 2rem;
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 64px;
 }
 
 .index__user--wrap {
   width: 80vw;
   max-width: 1200px;
+  background: #ffffff;
   margin: 0 auto 24px;
   padding: 48px;
-  border-radius: 8px;
-  box-shadow: 2px 5px 12px rgba(218, 226, 226, 0.85);
+  border-radius: 16px;
 }
 
 .index__user--wrap:nth-child(2n + 1) .index__user--wrap--course {
@@ -1156,7 +1237,7 @@ footerここまで
   padding: 8px 0;
   border: #3dd8cc 1px solid;
   border-radius: 40px;
-  margin: 40px auto 88px;
+  margin: 40px auto 0;
   text-align: center;
   transition: 0.2s color, 0.2s background;
 }
@@ -1169,7 +1250,7 @@ footerここまで
 .index__faq {
   width: 75vw;
   max-width: 1000px;
-  margin: 0 auto;
+  margin: 88px auto 0;
 }
 
 .index__faq--title {
@@ -1494,4 +1575,65 @@ footerここまで
   opacity: 1;
   -webkit-animation: 0.2s fadeIn;
           animation: 0.2s fadeIn;
+}
+
+@media screen and (min-width: 481px) {
+  .index__fv {
+    justify-content: flex-start;
+    max-width: 1200px;
+    height: 90vh;
+    max-height: 700px;
+    background-size: 60% auto;
+    margin: 80px auto 0;
+  }
+  .index__fv--logo {
+    width: 40%;
+  }
+  .index__fv--logo a {
+    width: auto;
+    height: 56px;
+    font-size: 2.2rem;
+  }
+  .index__rcm {
+    width: 80vw;
+    max-width: 1200px;
+  }
+  .index__rcm--title {
+    width: 80%;
+    margin: 0 auto 54px;
+  }
+  .index__rcm--text {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .index__fv {
+    min-height: 60vh;
+    flex-direction: column;
+    background-size: contain;
+    background-position: bottom 80px center;
+  }
+  .index__fv--logo {
+    width: 100%;
+    padding: 104px 16px 0;
+  }
+  .index__fv--logo h1 {
+    width: 80%;
+  }
+  .index__fv--logo a {
+    width: 200px;
+    height: 36px;
+    font-size: 1.2rem;
+    margin: 200px auto 0;
+  }
+  .index__rcm {
+    width: 90vw;
+  }
+  .index__rcm--title {
+    margin: 0 auto 24px;
+  }
+  .index__rcm--text {
+    font-size: 1.6rem;
+  }
 }

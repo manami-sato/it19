@@ -8,16 +8,16 @@ $black: #454545;
 $gray: #f8f5f7;
 $white: #ffffff;
 
-@mixin titleSet() {
+@mixin titleSet($m:80px 0 24px) {
   &--title {
     font-size: 3.5rem;
     text-align: center;
-    margin: 80px 0 20px;
+    margin: $m;
   }
   &--description {
     font-size: 2rem;
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 64px;
   }
 }
 
