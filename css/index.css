@@ -785,102 +785,58 @@ footerここまで
 }
 
 .index__woman {
-  width: 80vw;
-  max-width: 1200px;
   margin: 0 auto;
 }
 
 .index__woman > div {
   display: flex;
-  justify-content: space-around;
 }
 
-.index__woman--title {
-  width: 80%;
-  margin: 88px auto 64px;
-}
-
-.index__woman--title img {
-  width: 100%;
-}
-
-.index__woman--img {
-  width: 40%;
-}
-
-.index__woman--img img {
+.index__woman--title img, .index__woman--img img {
   width: 100%;
 }
 
 .index__woman--text {
-  width: 50%;
   height: auto;
-  min-height: 200px;
   background: #f8f5f7;
   padding: 32px 24px;
   border-radius: 24px;
 }
 
-.index__marketing {
-  margin-top: 100px;
-}
-
 .index__marketing--title {
-  font-size: 3rem;
   text-align: center;
   margin-bottom: 24px;
 }
 
 .index__marketing--title--accent {
   color: #3dd8cc;
-  font-size: 7rem;
 }
 
 .index__marketing--title span:last-child {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  font-size: 5rem;
-  padding: 0 10px;
   position: relative;
 }
 
 .index__marketing--title span:last-child::after {
   content: "19";
   color: #3dd8cc;
-  font-size: 7rem;
   opacity: 0.5;
   position: absolute;
   z-index: -1;
 }
 
 .index__marketing--description {
-  font-size: 2rem;
-  line-height: 5rem;
   text-align: center;
-  margin-bottom: 72px;
 }
 
 .index__marketing--flow {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  height: 80vh;
+  min-height: 80vh;
   background: #f8f5f7;
-  padding: 100px 10%;
-}
-
-.index__marketing--flow--txt {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 40%;
-  max-width: 480px;
-  min-width: 320px;
-}
-
-.index__marketing--flow--img {
-  width: 400px;
 }
 
 .index__marketing--flow--img img {
@@ -889,8 +845,6 @@ footerここまで
 
 .index__marketing--flow--title {
   display: inline-block;
-  font-size: 4rem;
-  line-height: 4rem;
   background: linear-gradient(0deg, #3dd8cc 0, #3dd8cc 30%, transparent 30%, transparent 100%);
   position: relative;
 }
@@ -906,47 +860,27 @@ footerここまで
   margin: auto;
 }
 
-.index__marketing--flow--description {
-  font-size: 1.8rem;
-  line-height: 3.5rem;
-  margin-top: 30px;
-}
-
-.index__marketing--flow--point {
+.index__marketing--flow--point > div {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 54px;
   background: #fff;
-  font-size: 1.8rem;
   font-weight: bold;
   margin-bottom: 24px;
   border-radius: 30px;
   box-shadow: 3px 4px 0 rgba(48, 167, 158, 0.9);
 }
 
-.index__marketing--flow:nth-child(2n) {
+.index__marketing--flow--point > div:last-of-type {
+  margin: 0;
+}
+
+.index__marketing--flow:nth-child(even) {
   background: #ffffff;
 }
 
-.index__marketing--flow:nth-child(2n) > div {
-  order: 2;
-}
-
-.index__marketing--flow:nth-child(2n) > div > div {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-
-.index__marketing--flow:nth-child(2n) figure {
-  order: 1;
-}
-
 .index__course {
-  width: 85vw;
-  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -965,12 +899,6 @@ footerここまで
 .index__course > div {
   display: flex;
   justify-content: space-around;
-  flex-wrap: wrap;
-}
-
-.index__course--wrap {
-  width: 30%;
-  min-width: 300px;
 }
 
 .index__course--wrap > div {
@@ -983,13 +911,7 @@ footerここまで
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 65px;
   color: #ffffff;
-  font-size: 2.5rem;
-}
-
-.index__course--wrap--description {
-  font-size: 1.8rem;
 }
 
 .index__course--wrap dl {
@@ -998,7 +920,6 @@ footerここまで
 }
 
 .index__course--wrap dl dt {
-  font-size: 1.8rem;
   margin-bottom: 10px;
 }
 
@@ -1067,11 +988,6 @@ footerここまで
   font-weight: bold;
   margin: 0 5px;
   line-height: 8rem;
-}
-
-.index__course--wrap--contents {
-  font-size: 1.5rem;
-  line-height: 2.5rem;
 }
 
 .index__style {
@@ -1605,6 +1521,123 @@ footerここまで
   .index__rcm--text {
     font-size: 3rem;
   }
+  .index__woman {
+    width: 80vw;
+    max-width: 1200px;
+  }
+  .index__woman--title {
+    width: 80%;
+    margin: 88px auto 64px;
+  }
+  .index__woman > div {
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .index__woman--img {
+    width: 40%;
+  }
+  .index__woman--text {
+    width: 50%;
+    min-height: 200px;
+  }
+  .index__marketing {
+    margin-top: 100px;
+  }
+  .index__marketing--title {
+    font-size: 3rem;
+  }
+  .index__marketing--title--accent {
+    font-size: 7rem;
+  }
+  .index__marketing--title span:last-child {
+    font-size: 5rem;
+    padding: 0 10px;
+  }
+  .index__marketing--title span:last-child::after {
+    font-size: 7rem;
+  }
+  .index__marketing--description {
+    font-size: 2rem;
+    line-height: 5rem;
+    margin-bottom: 72px;
+  }
+  .index__marketing--flow {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-gap: 10%;
+    padding: 100px 15%;
+  }
+  .index__marketing--flow--title {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+  .index__marketing--flow--description {
+    font-size: 1.8rem;
+    line-height: 3.5rem;
+    margin-top: 30px;
+  }
+  .index__marketing--flow--point > div {
+    height: 54px;
+    font-size: 1.8rem;
+  }
+  .index__marketing--flow--img {
+    width: 400px;
+  }
+  .index__marketing--flow:nth-child(odd) {
+    grid-template-columns: 60% 30%;
+  }
+  .index__marketing--flow:nth-child(odd) > div:first-of-type {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .index__marketing--flow:nth-child(odd) .index__marketing--flow--point {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .index__marketing--flow:nth-child(odd) .index__marketing--flow--img {
+    grid-column: 2;
+    grid-row: 1/3;
+  }
+  .index__marketing--flow:nth-child(even) {
+    grid-template-columns: 30% 60%;
+  }
+  .index__marketing--flow:nth-child(even) > div:first-of-type {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .index__marketing--flow:nth-child(even) .index__marketing--flow--point {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  .index__marketing--flow:nth-child(even) .index__marketing--flow--img {
+    grid-column: 1;
+    grid-row: 1/3;
+  }
+  .index__course {
+    width: 85vw;
+    max-width: 1200px;
+  }
+  .index__course > div {
+    flex-wrap: wrap;
+  }
+  .index__course--wrap {
+    width: 30%;
+    min-width: 300px;
+  }
+  .index__course--wrap--title {
+    height: 65px;
+    font-size: 2.5rem;
+  }
+  .index__course--wrap--description {
+    font-size: 1.8rem;
+  }
+  .index__course--wrap dl dt {
+    font-size: 1.8rem;
+  }
+  .index__course--wrap--contents {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -1635,5 +1668,112 @@ footerここまで
   }
   .index__rcm--text {
     font-size: 1.6rem;
+  }
+  .index__woman {
+    width: 90vw;
+    margin-top: 56px;
+  }
+  .index__woman > div {
+    align-items: center;
+    flex-direction: column;
+  }
+  .index__woman--title {
+    margin: 0 auto 40px;
+  }
+  .index__woman--img {
+    width: 80%;
+  }
+  .index__woman--text {
+    width: 75%;
+    font-size: 1rem;
+    margin-top: 24px;
+  }
+  .index__marketing {
+    margin-top: 64px;
+  }
+  .index__marketing--title {
+    font-size: 1.6rem;
+  }
+  .index__marketing--title--accent {
+    font-size: 5rem;
+  }
+  .index__marketing--title span:last-child {
+    font-size: 2.4rem;
+  }
+  .index__marketing--title span:last-child::after {
+    font-size: 5rem;
+  }
+  .index__marketing--description {
+    font-size: 1.1rem;
+    line-height: 2rem;
+    margin-bottom: 48px;
+  }
+  .index__marketing--flow {
+    display: flex;
+    flex-direction: column;
+    padding: 48px 20%;
+  }
+  .index__marketing--flow > div:first-of-type {
+    order: 1;
+  }
+  .index__marketing--flow--title {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+  .index__marketing--flow--description {
+    width: 60vw;
+    font-size: 1.1rem;
+    line-height: 2rem;
+    margin-top: 16px;
+  }
+  .index__marketing--flow--point {
+    order: 3;
+  }
+  .index__marketing--flow--point > div {
+    height: 32px;
+    font-size: 1.2rem;
+  }
+  .index__marketing--flow--img {
+    margin: 24px 0;
+    order: 2;
+  }
+  .index__course {
+    width: 90vw;
+  }
+  .index__course--wrap > div > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    margin: 16px 0;
+    position: relative;
+  }
+  .index__course--wrap--title {
+    height: 40px;
+    font-size: 1.6rem;
+  }
+  .index__course--wrap--description {
+    font-size: 1.4rem;
+  }
+  .index__course--wrap--img {
+    position: absolute;
+  }
+  .index__course--wrap--rcm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: rgba(248, 245, 247, 0.7);
+    position: relative;
+    z-index: 3;
+  }
+  .index__course--wrap dl dt {
+    font-size: 1.3rem;
+  }
+  .index__course--wrap--contents {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
   }
 }
