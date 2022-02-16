@@ -107,7 +107,7 @@
     //
     // 学習スタイルのモーダル
     //
-    const addContents = (i,num) => {
+    const addContents = (i, num) => {
       let modalHead = `.index__modal--head--`;
       let modalWrap = `.index__modal--wrap--`;
       let titleData = res.style[i].title;
@@ -135,7 +135,7 @@
         let scrollY = window.pageYOffset; //モーダルの表示位置をトップに固定
         $(".index__modal").css("top", `${scrollY}px`);
         $(".index__modal").attr("id", "modalDisplay");
-        addContents(i,i + 1);
+        addContents(i, i + 1);
         // スクロール禁止
         document.addEventListener("touchmove", disableScroll, {
           passive: false,
@@ -149,7 +149,7 @@
           if (i < 0) {
             i = styleWrapAccess.length - 1;
           }
-          addContents(i,i + 1);
+          addContents(i, i + 1);
         });
         $(document).on("click", ".index__modal--arrow--next", function () {
           rmvContents();
@@ -157,7 +157,7 @@
           if (i == styleWrapAccess.length) {
             i = 0;
           }
-          addContents(i,i + 1);
+          addContents(i, i + 1);
         });
         $(document).on("click", ".index__modal--back", function () {
           // スクロール再開
@@ -174,4 +174,31 @@
       };
     }
   });
+
+  function switchByWidth() {
+    if (window.matchMedia("(max-width: 480px)").matches) {
+      let navCount = 0;
+      const navBtn = document.querySelector(".nav__btn");
+      const navContents = document.querySelector(".nav");
+      navBtn.addEventListener("click", () => {
+        navCount++;
+        if (navCount % 2 !== 0) {
+          navContents.setAttribute("id", "navActive");
+          const navLink = document.querySelectorAll(".nav__link a");
+          for (let i = 0; i < navLink.length; i++) {
+            navLink[i].onclick = () => {
+              navContents.removeAttribute("id");
+              navContents.setAttribute("id", "navDisActive");
+              navCount = 0;
+            };
+          }
+        } else {
+          navContents.removeAttribute("id");
+          navContents.setAttribute("id", "navDisActive");
+        }
+      });
+    }
+  }
+  window.onload = switchByWidth;
+  window.onresize = switchByWidth;
 }
